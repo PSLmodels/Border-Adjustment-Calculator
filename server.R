@@ -39,30 +39,25 @@ function(input, output) {
                                                                                                         round(input$c6*input$c7/100,digits = 2)-
                                                                                                         round((1-input$c7/100)*input$c6,digits = 2)),digits = 2))),
                           
-     "NTR.BA" = as.character(c(round(input$c5+
-                                       0.4*(1/(1-0.4))*input$c10*(1-input$c9/100)*(round((1-input$c7/100)*input$c6*(1-input$c8*input$c9/10000),digits = 2)-
-                                          round((1-input$c5/100)*100*(1-input$c8*input$c9/10000),digits = 2))/100
-                                     ,digits = 2),
+     "NTR.BA" = as.character(c(  round(input$c5 + (((1-input$c7/100)*input$c6*(1-input$c9/100))-
+                                                    ((1-input$c5/100)*100*(1-input$c9/100)))*input$c8*(1/(1-input$c8/100))*input$c10/10000,digits =2),
                                   round((1-input$c5/100)*100*(1-input$c8*input$c9/10000),digits = 2),
                                   round(input$c6*input$c7/100,digits = 2),
                                   round((1-input$c7/100)*input$c6*(1-input$c8*input$c9/10000),digits = 2),
-                               round(input$c5+
-                                       0.4*(1/(1-0.4))*input$c10*(1-input$c9/100)*(round((1-input$c7/100)*input$c6*(1-input$c8*input$c9/10000),digits = 2)-
-                                                                                     round((1-input$c5/100)*100*(1-input$c8*input$c9/10000),digits = 2))/100
-                                     ,digits = 2) - round(input$c6*input$c7/100,digits = 2),
-                                  round(0.01*input$c8*(round(input$c5+
-                                                               0.4*(1/(1-0.4))*input$c10*(1-input$c9/100)*(round((1-input$c7/100)*input$c6*(1-input$c8*input$c9/10000),digits = 2)-
-                                                                                                             round((1-input$c5/100)*100*(1-input$c8*input$c9/10000),digits = 2))/100
-                                                             ,digits = 2) - round(input$c6*input$c7/100,digits = 2)),digits = 2),
-                               round(input$c5+
-                                       0.4*(1/(1-0.4))*input$c10*(1-input$c9/100)*(round((1-input$c7/100)*input$c6*(1-input$c8*input$c9/10000),digits = 2)-
-                                       round((1-input$c5/100)*100*(1-input$c8*input$c9/10000),digits = 2))/100
-                                     ,digits = 2)+round((1-input$c5/100)*100*(1-input$c8*input$c9/10000),digits = 2)-
-                                 round(input$c6*input$c7/100,digits = 2)- round((1-input$c7/100)*input$c6*(1-input$c8*input$c9/10000),digits = 2)-
-                                 round(0.01*input$c8*(round(input$c5+
-                                 0.4*(1/(1-0.4))*input$c10*(1-input$c9/100)*(round((1-input$c7/100)*input$c6*(1-input$c8*input$c9/10000),digits = 2)-
-                                       round((1-input$c5/100)*100*(1-input$c8*input$c9/10000),digits = 2))/100
-                                       ,digits = 2) - round(input$c6*input$c7/100,digits = 2)),digits = 2)  
+                               round(input$c5 + (((1-input$c7/100)*input$c6*(1-input$c9/100))-
+                                                         ((1-input$c5/100)*100*(1-input$c9/100)))*input$c8*(1/(1-input$c8/100))*input$c10/10000,digits =2) 
+                                     - round(input$c6*input$c7/100,digits = 2),
+                                  round(0.01*input$c8*(round(input$c5 + (((1-input$c7/100)*input$c6*(1-input$c9/100))-
+                                                                           ((1-input$c5/100)*100*(1-input$c9/100)))*input$c8*(1/(1-input$c8/100))*input$c10/10000,digits =2) 
+                                                       - round(input$c6*input$c7/100,digits = 2)),digits = 2),
+                               round(input$c5 + (((1-input$c7/100)*input$c6*(1-input$c9/100))-
+                                              ((1-input$c5/100)*100*(1-input$c9/100)))*input$c8*(1/(1-input$c8/100))*input$c10/10000,digits =2)+
+                               round((1-input$c5/100)*100*(1-input$c8*input$c9/10000),digits = 2) -
+                                 round(input$c6*input$c7/100,digits = 2)-
+                                 round((1-input$c7/100)*input$c6*(1-input$c8*input$c9/10000),digits = 2) -
+                                 round(0.01*input$c8*(round(input$c5 + (((1-input$c7/100)*input$c6*(1-input$c9/100))-
+                                      ((1-input$c5/100)*100*(1-input$c9/100)))*input$c8*(1/(1-input$c8/100))*input$c10/10000,digits =2) 
+                                              - round(input$c6*input$c7/100,digits = 2)),digits = 2)
                                   )), 
       stringsAsFactors=FALSE)
   }) 
