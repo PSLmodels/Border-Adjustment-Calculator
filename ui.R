@@ -12,14 +12,14 @@ fluidPage(
                             costs to consumers.  This model assumes that firms can fully deduct losses 
                             against past and future taxes.")),
       wellPanel(
-        sliderInput("c8", "Tax Rate (%)",
-                  min=0, max=100, value=20),
-        strong("Note the current law assumes a tax rate of 35%, with no Border adjustment.")),
+        sliderInput("c8", "New Tax Rate (%)",
+                  min=0, max=100, value=20)),
       wellPanel(
-      sliderInput("c9", "Full Currency Adjustment (%)",
+      sliderInput("c9", "Currency Adjustment (%)",
                   min=0, max=100, value=100),
       sliderInput("c10", "Import Costs Passed on to Consumers (%)",
-                  min=0, max=100, value=0))
+                  min=0, max=100, value=0),
+      strong("Note that import costs will only be passed on to consumers when the currency adjustment is less than 100%. "))
     ),
     column(5,
            wellPanel(
@@ -49,6 +49,5 @@ fluidPage(
         tags$a(href="https://shiny.rstudio.com/"," Shiny"),
         "for visualization."
       )
-    )
-  )
+  ))
 )
