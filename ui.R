@@ -13,7 +13,7 @@ fluidPage(
                             against past and future taxes.")),
       wellPanel(
         sliderInput("c8", "New Tax Rate (%)",
-                  min=0, max=100, value=20)),
+                  min=0, max=99, value=20)),
       wellPanel(
       sliderInput("c9", "Currency Adjustment (%)",
                   min=0, max=100, value=100),
