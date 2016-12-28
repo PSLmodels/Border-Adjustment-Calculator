@@ -1,5 +1,4 @@
 # Border_Adjustment_Calculator
-=================================
 
 The code in this repo generates a 
 [web-page](https://ospc.shinyapps.io/border-adjustment-calculator/) 
