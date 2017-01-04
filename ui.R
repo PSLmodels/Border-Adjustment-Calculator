@@ -13,7 +13,7 @@ fluidPage(
                             costs to consumers.  This model assumes that firms can fully deduct losses 
                             against past and future taxes.")),
       wellPanel(
-        sliderInput("c8", "New Tax Rate (%)",
+        sliderInput("new_tax_rate", "New Tax Rate (%)",
                   min=0, max=99, value=20)),
       wellPanel(
       sliderInput("c9", "Currency Adjustment (%)",
