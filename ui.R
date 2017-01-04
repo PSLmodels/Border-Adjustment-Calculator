@@ -27,7 +27,7 @@ fluidPage(
            wellPanel(
       sliderInput("dom_sales", "Domestic Sales / Total Sales (%)",
                   min=0, max=100, value=50),
-      sliderInput("c6", "Total Costs / Total Sales (%)",
+      sliderInput("tot_sales", "Total Costs / Total Sales (%)",
                   min=0, max=100, value=50),
       sliderInput("c7", "Domestic Costs / Total Costs (%)",
                   min=0, max=100, value=50)
