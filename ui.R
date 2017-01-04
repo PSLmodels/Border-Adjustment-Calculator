@@ -18,7 +18,7 @@ fluidPage(
       wellPanel(
       sliderInput("currency_adj", "Currency Adjustment (%)",
                   min=0, max=100, value=100),
-      sliderInput("c10", "Import Costs Passed on to Consumers (%)",
+      sliderInput("import_cost", "Import Costs Passed on to Consumers (%)",
                   min=0, max=100, value=0),
       strong("Note that import costs will only be passed on to consumers when the currency adjustment is 
              less than 100% and the border adjustment imposes costs rather than benefits."))

@@ -43,22 +43,22 @@ function(input, output) {
       
      "NTR.BA" = as.character(c( 
                 round(input$c5 + max((((1-input$c7/100)*input$c6*(1-input$currency_adj/100))- # US Sales
-                  ((1-input$c5/100)*100*(1-input$currency_adj/100)))*input$new_tax_rate*(1/(1-input$new_tax_rate/100))*input$c10/10000,0),digits = 1),
+                  ((1-input$c5/100)*100*(1-input$currency_adj/100)))*input$new_tax_rate*(1/(1-input$new_tax_rate/100))*input$import_cost/10000,0),digits = 1),
                 round((1-input$c5/100)*100*(1-input$new_tax_rate*input$currency_adj/10000),digits = 1), # Foreign Sales
                 round(input$c6*input$c7/100,digits = 1), # US Costs 
                 round((1-input$c7/100)*input$c6*(1-input$new_tax_rate*input$currency_adj/10000),digits = 1), # Foreign Costs
                 round(input$c5 + max((((1-input$c7/100)*input$c6*(1-input$currency_adj/100))- # Tax Base
-                  ((1-input$c5/100)*100*(1-input$currency_adj/100)))*input$new_tax_rate*(1/(1-input$new_tax_rate/100))*input$c10/10000,0)
+                  ((1-input$c5/100)*100*(1-input$currency_adj/100)))*input$new_tax_rate*(1/(1-input$new_tax_rate/100))*input$import_cost/10000,0)
                     - input$c6*input$c7/100,digits = 1),
                 round(0.01*input$new_tax_rate*(input$c5 + max((((1-input$c7/100)*input$c6*(1-input$currency_adj/100))- # Taxes
-                  ((1-input$c5/100)*100*(1-input$currency_adj/100)))*input$new_tax_rate*(1/(1-input$new_tax_rate/100))*input$c10/10000,0) 
+                  ((1-input$c5/100)*100*(1-input$currency_adj/100)))*input$new_tax_rate*(1/(1-input$new_tax_rate/100))*input$import_cost/10000,0) 
                     - input$c6*input$c7/100),digits = 1),               
                 round(input$c5 + max((((1-input$c7/100)*input$c6*(1-input$currency_adj/100))- # After Tax Profit
-                  ((1-input$c5/100)*100*(1-input$currency_adj/100)))*input$new_tax_rate*(1/(1-input$new_tax_rate/100))*input$c10/10000,0) +
+                  ((1-input$c5/100)*100*(1-input$currency_adj/100)))*input$new_tax_rate*(1/(1-input$new_tax_rate/100))*input$import_cost/10000,0) +
                     (1-input$c5/100)*100*(1-input$new_tax_rate*input$currency_adj/10000) - input$c6*input$c7/100 -
                       (1-input$c7/100)*input$c6*(1-input$new_tax_rate*input$currency_adj/10000) -
                         (0.01*input$new_tax_rate*(input$c5 + max((((1-input$c7/100)*input$c6*(1-input$currency_adj/100))-
-                          ((1-input$c5/100)*100*(1-input$currency_adj/100)))*input$new_tax_rate*(1/(1-input$new_tax_rate/100))*input$c10/10000,0) 
+                          ((1-input$c5/100)*100*(1-input$currency_adj/100)))*input$new_tax_rate*(1/(1-input$new_tax_rate/100))*input$import_cost/10000,0) 
                             - input$c6*input$c7/100)),1)
                 )), 
       stringsAsFactors=FALSE)
