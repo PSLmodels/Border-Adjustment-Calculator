@@ -16,7 +16,7 @@ fluidPage(
         sliderInput("new_tax_rate", "New Tax Rate (%)",
                   min=0, max=99, value=20)),
       wellPanel(
-      sliderInput("c9", "Currency Adjustment (%)",
+      sliderInput("currency_adj", "Currency Adjustment (%)",
                   min=0, max=100, value=100),
       sliderInput("c10", "Import Costs Passed on to Consumers (%)",
                   min=0, max=100, value=0),
