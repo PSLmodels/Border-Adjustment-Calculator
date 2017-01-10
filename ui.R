@@ -1,5 +1,6 @@
 library(shiny)
 fluidPage(
+  br(),
   tags$img(src="ospc.png", width="130px",height="33px"),
   tags$h2("How Border Adjustments Work"),
   fluidRow(
@@ -12,23 +13,23 @@ fluidPage(
                             costs to consumers.  This model assumes that firms can fully deduct losses 
                             against past and future taxes.")),
       wellPanel(
-        sliderInput("c8", "New Tax Rate (%)",
+        sliderInput("new_tax_rate", "New Tax Rate (%)",
                   min=0, max=99, value=20)),
       wellPanel(
-      sliderInput("c9", "Currency Adjustment (%)",
+      sliderInput("currency_adj", "Currency Adjustment (%)",
                   min=0, max=100, value=100),
-      sliderInput("c10", "Import Costs Passed on to Consumers (%)",
+      sliderInput("import_cost", "Import Costs Passed on to Consumers (%)",
                   min=0, max=100, value=0),
       strong("Note that import costs will only be passed on to consumers when the currency adjustment is 
              less than 100% and the border adjustment imposes costs rather than benefits."))
     ),
     column(5,
            wellPanel(
-      sliderInput("c5", "Domestic Sales / Total Sales (%)",
+      sliderInput("dom_sales", "Domestic Sales / Total Sales (%)",
                   min=0, max=100, value=50),
-      sliderInput("c6", "Total Costs / Total Sales (%)",
+      sliderInput("tot_sales", "Total Costs / Total Sales (%)",
                   min=0, max=100, value=50),
-      sliderInput("c7", "Domestic Costs / Total Costs (%)",
+      sliderInput("dom_costs", "Domestic Costs / Total Costs (%)",
                   min=0, max=100, value=50)
       ),
       strong("Table Keys:"),
