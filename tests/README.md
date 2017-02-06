@@ -21,7 +21,7 @@ After installation:
 Then, in the console type 
 ```
 library(testthat)
-test_dir("[YOURDIRECTORY]/Border-adjustment-calculator/tests", filter = 'numeric', reporter="summary")
+test_dir("[YOUR_DIRECTORY]/Border-adjustment-calculator/tests", filter = 'numeric', reporter="summary")
 ```
 and run. 
 
@@ -36,19 +36,19 @@ Troubleshoot
 ------------------
 Here are some typical errors we might run into:
 
-****Error 1****:
+***Error 1***:
 ```
 Error in library(testthat) : there is no package called ‘testthat’
 ```
 Reason: Package `testthat` is not installed.
 
-****Error 2****:
+***Error 2***:
 ```
 Error: could not find function "test_dir"
 ```
 Reason: Package `testthat` is not loaded, run `library(testthat)`.
 
-****Error 3****:
+***Error 3***:
 ```
 Failed ----------------------------------------------------------------------------------------------------------------------------
 1. Failure: Testing New Tax Rate #2 (@test-numeric.R#71) --------------------------------------------------------------------------
