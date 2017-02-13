@@ -1,7 +1,7 @@
 library(shiny)
 fluidPage(
   br(),
-  tags$img(src="ospc.png", width="130px",height="33px"),
+  tags$a(img(src="ospc.png",width="130px",height="33px"),href="https://www.ospc.org/"),
   tags$h2("How Border Adjustments Work"),
   fluidRow(
     column(3,
